@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    int n,k,c=0,comp=0;
+    printf("enter the no.of elements\n");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter the elements in the array\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("the array is\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d",a[i]);
+    }
+    printf("\nenter the key element which you wanna find : ");
+    scanf("%d",&k);
+    for(int i=0;i<n;i++)
+    {
+        comp++;
+        if(k==a[i])
+        {
+            printf("\nthe element %d is present",k);
+            c++;
+            break;
+        }
+       
+    }
+    if(c==0)
+    {
+        printf("\nthe element %d is not present",k);
+    }
+    printf("\nno.of comparissions %d ",comp);
+    return 0;
+}
